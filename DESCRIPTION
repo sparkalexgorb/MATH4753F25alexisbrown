@@ -13,5 +13,4 @@ Description: Code for labs 2025.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/sparkalexgorb/MATH4753F25alexisbrown
-BugReports: https://github.com/sparkalexgorb/MATH4753F25alexisbrown/issues
+RoxygenNote: 7.3.2
