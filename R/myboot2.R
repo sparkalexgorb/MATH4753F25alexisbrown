@@ -7,7 +7,7 @@
 #' @param cx font size
 #' @param ... other
 #'
-#' @returns a histogram of the bootstrap sample statistic wiht the confidence interval and point estimate labelled
+#' @returns a histogram of the bootstrap sample statistic with the confidence interval and point estimate labelled
 #' @export
 #'
 #' @examples

@@ -20,7 +20,7 @@ myboot2(iter = 10000, x, fun = "mean", alpha = 0.05, cx = 1.5, ...)
 \item{...}{other}
 }
 \value{
-a histogram of the bootstrap sample statistic wiht the confidence interval and point estimate labelled
+a histogram of the bootstrap sample statistic with the confidence interval and point estimate labelled
 }
 \description{
 Bootleg Function
