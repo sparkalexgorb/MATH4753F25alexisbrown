@@ -1,0 +1,50 @@
+---
+title: "Birthday Problem"
+author: "Alexis Brown"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{birthday}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753F25alexisbrown)
+```
+
+# Mathematical Derivation
+$$P(A)=$$ {2 or more people have the same birthday}
+$$A^C=$$ = {every student has a different birthday}
+$$P(A^C)= (365/365)(364/365)(363/365)...$$ with n factors
+$$P(A^C)= ((365-0)(364-1)(363-2)...)/365^n = ((365)(364)...(365-n+1))/365^n$$
+$$P(A)+P(A^C)=1$$
+
+\[P(A^C)=\frac{365\times 364\times \cdots \times (365-n+1)}{365^n}\]
+
+\[P(A)=1-P(A^C)=1-\frac{365\times 364\times \cdots \times (365-n+1)}{365^n}\]
+
+# Reformation of Probability
+$$365 P_n = n! 365 C_n$$
+$$P(A^C)= (365P_n) /(365^n) ; logP(A^C)= log364 P_n -nlog365 = log n! +lchoose(365,n) - nlog365 = lfactorial(n) + lchoose(365, n) - nlog365$$
+
+$$P(A)=1-P(A^C) = 1- exp(logP(A^C))= 1 - exp(lfactorial(n) + lchoose(365,n) - nlog365)$$
+
+P(A) = 1 - exp(lfactorial(n) + lchoose(365,n) - nlog365)
+
+## Body of Function
+```{r}
+body(birthday)
+```
+
+## Run
+```{r, include = TRUE}
+birthday(n = 20:25)
+```
+
