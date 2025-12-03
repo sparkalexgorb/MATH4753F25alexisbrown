@@ -1,0 +1,54 @@
+---
+title: "Package Functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753F25alexisbrown)
+```
+
+# Functions
+
+## Birthday Problem Function
+
+Calculates a probability scalar that 2 or more people share a birthday in a group of n people.
+
+```{r}
+birthday(25)
+```
+
+## Hypergeometric Simulation Function
+
+Creates a bar plot of the distribution of number of successes over the hypergeometric simulation with number of iterations iter, population size N, number of successes r, and sample size n.
+
+```{r}
+myhyper(iter = 100, N =20, r =12, n =5)
+```
+
+## Bootleg Function
+
+Creates a histogram of the bootstrap sample statistic with the confidence interval and point estimate labelled.
+
+```{r}
+myboot2(iter=10000,x=1:10,fun="mean",alpha=0.05,cx=1.5)
+```
+
+
+## Scatterhist Function
+
+Creates a scatter plot of x vs y with marginal histograms.
+
+```{r}
+scatterhist(x = 1:10, y = 11:20)
+```
